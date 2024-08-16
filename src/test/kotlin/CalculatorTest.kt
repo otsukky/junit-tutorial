@@ -14,4 +14,13 @@ class CalculatorTest {
 
             assertThat(actual, `is`(equalTo(expected)))
         }
+
+    @Test
+    fun `divideで3と2の除算結果が取得できる`() {
+        val calculator = Calculator()
+        val expected = 1.5f
+        val actual = calculator.divide(3, 2)
+
+        assertThat(actual, `is`(equalTo(expected)))
+    }
 }
