@@ -7,7 +7,7 @@ import org.hamcrest.CoreMatchers.`is`
 
 class CalculatorTest {
     @Test
-    fun `multiplyで乗算結果が取得できる`() {
+    fun `multiplyで3と4の乗算結果が取得できる`() {
             val calculator = Calculator()
             val expected = 12
             val actual = calculator.multiply(3, 4)
