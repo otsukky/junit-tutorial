@@ -3,6 +3,7 @@ import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
 import org.hamcrest.CoreMatchers.`is`
+import org.junit.jupiter.api.assertThrows
 
 
 class CalculatorTest {
@@ -22,5 +23,17 @@ class CalculatorTest {
         val actual = calculator.divide(3, 2)
 
         assertThat(actual, `is`(equalTo(expected)))
+    }
+
+    @Test
+    fun `divideで0の除算はIllegalArgumentExceptionになる`() {
+        val calculator = Calculator()
+        val expected = "divide by zero"
+
+        val error = assertThrows<IllegalArgumentException> {
+            calculator.divide(3, 0)
+        }
+
+        assertThat(error.message, `is`(equalTo(expected)))
     }
 }
