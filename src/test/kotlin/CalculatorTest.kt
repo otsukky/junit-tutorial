@@ -9,12 +9,12 @@ import org.junit.jupiter.api.assertThrows
 class CalculatorTest {
     @Test
     fun `multiplyで3と4の乗算結果が取得できる`() {
-            val calculator = Calculator()
-            val expected = 12
-            val actual = calculator.multiply(3, 4)
+        val calculator = Calculator()
+        val expected = 12
+        val actual = calculator.multiply(3, 4)
 
-            assertThat(actual, `is`(equalTo(expected)))
-        }
+        assertThat(actual, `is`(equalTo(expected)))
+    }
 
     @Test
     fun `divideで3と2の除算結果が取得できる`() {
