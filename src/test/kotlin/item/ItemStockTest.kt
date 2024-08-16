@@ -1,3 +1,5 @@
+package item
+
 import org.example.item.Item
 import org.example.item.ItemStock
 import org.junit.jupiter.api.DisplayName
